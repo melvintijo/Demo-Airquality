@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Functions and Variables Example</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <body style="background-color:rgba(0, 174, 255, 0.233); font-size: 180%;">
+        <h3>Gas sensor detected Carbon Monoxide, Ammonia, Ethanol, Methane, Propane & Iso-Butane in the room:</h3>
+        <!-- Sync example -->
+        <p>{{Gas}}</p>
+
+        <hr>
+        <h3>Airquality sensor detected Particles in air:</h3>
+        <p>{{AirQualityPmL}}</p>
+
+        <hr>
+        <h3>Airquality sensor detected PM 1.0 in the room:</h3>
+        <!-- Read variables example -->
+        <p>{{AirQualityPm}}</p>
+        
+        <hr>
+        <h3>AQI PM 2.5:</h3>
+        <p id = "p25"> {{AQI25}}</p>
+        <div>
+            <img src="PM25.jpg" alt="PM25" style = "display: block; margin-left: auto; margin-right: auto; ">
+            </div>
+        
+        <hr>
+        <h3>AQI PM 10:</h3>
+        <p id = "p100"> {{AQI100}}</p>
+        <div>
+            <img src="PM100.jpg" alt="PM100" style = "display: block; margin-left: auto; margin-right: auto; ">
+            </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="airquality.js"></script>
+</body>
+
+</html>
